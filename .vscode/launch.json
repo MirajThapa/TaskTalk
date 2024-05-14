@@ -1,0 +1,128 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "project_four",
+            "cwd": "project_four",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "project_four (profile mode)",
+            "cwd": "project_four",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "project_four (release mode)",
+            "cwd": "project_four",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "project_one",
+            "cwd": "project_one",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "project_one (profile mode)",
+            "cwd": "project_one",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "project_one (release mode)",
+            "cwd": "project_one",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "project_three",
+            "cwd": "project_three",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "project_three (profile mode)",
+            "cwd": "project_three",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "project_three (release mode)",
+            "cwd": "project_three",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "project_two",
+            "cwd": "project_two",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "project_two (profile mode)",
+            "cwd": "project_two",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "project_two (release mode)",
+            "cwd": "project_two",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "todo",
+            "cwd": "todo",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "todo (profile mode)",
+            "cwd": "todo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "todo (release mode)",
+            "cwd": "todo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "project_three",
+            "cwd": "project_two\\project_three",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "project_three (profile mode)",
+            "cwd": "project_two\\project_three",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "project_three (release mode)",
+            "cwd": "project_two\\project_three",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
