@@ -1,33 +1,33 @@
-import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PreferenceConstants {
+  static List<Map<String, dynamic>> todoList = [];
 
-  static List<String> todoList = [];
-
-// From here start to debug the code and try to fix this problem
-  static Future<void> saveTask(String taskName,bool checked) async{
+  // Load all tasks available in SharedPreferences
+  static Future<void> loadAllTaskAvailable() async {
     final prefs = await SharedPreferences.getInstance();
-    List<String> tasks = prefs.getStringList('tasks') ?? [];
-    // List<bool>
-    tasks.add(taskName);
-    await prefs.setStringList('tasks', tasks);
+    final List<String>? savedTasks = prefs.getStringList('todoList');
+    if (savedTasks != null) {
+      todoList = savedTasks.map((task) {
+        List<String> taskData = task.split('|');
+        return {'task': taskData[0], 'completed': taskData[1] == 'true'};
+      }).toList();
+    }
   }
 
-  static Future<List<String>> loadTasks() async{
+  // Save a new task to SharedPreferences
+  static Future<void> saveTask(String task) async {
     final prefs = await SharedPreferences.getInstance();
-    return prefs.getStringList('tasks') ?? [];
+    todoList.add({'task': task, 'completed': false});
+    List<String> savedTasks = todoList.map((task) => '${task['task']}|${task['completed']}').toList();
+    await prefs.setStringList('todoList', savedTasks);
   }
 
-  static Future<void> removeTask(int index) async{
+  // Remove a task from SharedPreferences
+  static Future<void> removeTask(int index) async {
     final prefs = await SharedPreferences.getInstance();
-    List<String> tasks = prefs.getStringList('tasks') ?? [];
-    tasks.remove(index);
-    await prefs.setStringList('tasks', tasks);
+    todoList.removeAt(index);
+    List<String> savedTasks = todoList.map((task) => '${task['task']}|${task['completed']}').toList();
+    await prefs.setStringList('todoList', savedTasks);
   }
-
-  static Future<void> loadAllTaskAvailable() async{
-    todoList = await loadTasks();
-  }
-
 }

@@ -2,6 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:login_project/authentication.dart';
 import 'package:login_project/main.dart';
 
+class RegisterPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Register'),
+      ),
+      body: RegisterForm(),
+    );
+  }
+}
+
 class RegisterForm extends StatefulWidget {
   @override
   _RegisterFormState createState() => _RegisterFormState();
